@@ -69,3 +69,6 @@ echo "Sum Reducer:$sumReducer \n";
 
 $productReducer = reducer([1, 2, 3, 4], fn($a, $b) => $a * $b, 1);
 echo "Product reducer: $productReducer \n";
+
+$negativeSum = reducer([1,2,3,4,5] ,fn($a,$b)=> $a - $b);
+echo "Negative Sum: $negativeSum";

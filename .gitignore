@@ -1,2 +1,4 @@
 # code
-s
+*.vscode*
+*.fleet*
+*node_modules*
