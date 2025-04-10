@@ -167,10 +167,10 @@ $result = match ($x) {
 };
 
 function fizzBuzz(int $number): string {
-    return match ($number) {
-        $number % 15 => "FizzBuzz",
-        $number % 3 => "Fizz",
-        $number % 5 => "Buzz",
+    return match (true) {
+        $number % 15 === 0 => "FizzBuzz",
+        $number % 3 === 0 => "Fizz",
+        $number % 5 === 0 => "Buzz",
         default => (string) $number,
     };
 }

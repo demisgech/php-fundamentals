@@ -6,7 +6,7 @@ $last_name = "Getachew";
 if($first_name == "Demis") {
   echo ("The condition is true");
 }else {
-  echo("The condition is true");
+  echo("The condition is false");
 }
 
 if ($last_name == "getachew"){

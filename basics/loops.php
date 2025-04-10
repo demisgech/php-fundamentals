@@ -156,7 +156,7 @@ do {
         <?php endwhile ?>
 
         <?php $i = 0; while( $i < count($users)) : ?>
-            $user = $users[$i];
+            <?php $user = $users[$i]; ?>
             <?php $i++; foreach ($user as $key => $value): ?>
                 <li> <?php echo $value ?></li>
             <?php endforeach ?>

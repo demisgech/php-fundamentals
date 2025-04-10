@@ -24,19 +24,20 @@ $users = [
 
 function show_result($value)
 {
-    echo ('<br/>'.$value);
+    echo ("\n".$value);
 }
 
-foreach ($users as $user) foreach ($user as $key => $value)
+foreach ($users as $user):
+    foreach ($user as $key => $value)
         show_result($key." : ".$value);
-
+endforeach;
 function square($x)
 {
     return $x * $x;
 }
 
 $sq = square(100);
-echo ("<br/> X: ".$sq);
+echo ("\n X: ".$sq);
 
 $customers = [
     ['id' => 1, 'name' => 'Demis', "email" => 'demisgech@gmail.com'],
@@ -57,7 +58,7 @@ function return_name($item)
 $customers_name = map_value($customers, "name");
 
 foreach ($customers_name as $key => $value)
-    echo '<br/>'.$value;
+    echo "\n".$value;
 
 function do_map_lambda($arrs, $key)
 {
@@ -69,13 +70,17 @@ function do_map_lambda($arrs, $key)
 $customers_name = do_map_lambda($customers, 'name');
 echo 'Lambda Mapping';
 foreach ($customers_name as $key => $value)
-    echo '<br/>'.$value;
+    echo "\n".$value;
 
 $customers_email = do_map_lambda($customers, "email");
-echo "<br/> Customers email";
+echo "\n Customers email";
 foreach ($customers_email as $key => $value)
-    echo "<br/>".$value;
+    echo "\n".$value;
 
 
 $product = fn ($x, $y) => $x * $y;
 echo ("Product: ".$product(20, 20));
+
+
+echo "\n JSON_PRETTY_PRINT \n";
+echo json_encode($users,JSON_PRETTY_PRINT);
